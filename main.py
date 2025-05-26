@@ -57,8 +57,8 @@ class PremiumLauncher:
         self.animate_particles()
         
     def setup_window(self):
-        """Configure la fenêtre avec style premium"""
-        self.root.title("✨ Solveur Simplexe Premium")
+        """Configure la fenêtre"""
+        self.root.title("✨ Solveur Simplexe ")
         self.root.geometry("1000x700")
         self.root.minsize(900, 600)
         
@@ -186,7 +186,7 @@ class PremiumLauncher:
         self.root.after(30, self.animate_particles)
     
     def create_premium_interface(self):
-        """Crée l'interface principale premium"""
+        """Crée l'interface principale"""
         # Container principal flottant
         self.container = tk.Frame(self.main_canvas, bg='#1a1f3a', bd=0)
         self.container.place(relx=0.5, rely=0.5, anchor='center', width=800, height=500)
@@ -230,7 +230,7 @@ class PremiumLauncher:
         
         # Titre avec effet de lueur
         self.title_text = self.title_canvas.create_text(400, 50,
-                                                        text="SOLVEUR SIMPLEXE PREMIUM",
+                                                        text="SOLVEUR SIMPLEXE",
                                                         font=('Arial', 28, 'bold'),
                                                         fill=self.theme['accent'])
         
@@ -263,7 +263,7 @@ class PremiumLauncher:
                 self.title_canvas.itemconfig(glow_id, fill=color)
             else:
                 glow = self.title_canvas.create_text(400 + offset, 50 + offset,
-                                                    text="SOLVEUR SIMPLEXE PREMIUM",
+                                                    text="SOLVEUR SIMPLEXE",
                                                     font=('Arial', 28, 'bold'),
                                                     fill=color)
                 self.title_canvas.tag_lower(glow, self.title_text)
@@ -638,11 +638,11 @@ class PremiumLauncher:
     
     def show_dependencies(self):
         """Affiche la gestion des dépendances"""
-        messagebox.showinfo("Dépendances", "Gestionnaire de dépendances premium\n\nToutes les dépendances sont installées!")
+        messagebox.showinfo("Dépendances", "Gestionnaire de dépendances\n\nToutes les dépendances sont installées!")
     
     def show_help(self):
         """Affiche l'aide"""
-        messagebox.showinfo("Aide", "Solveur Simplexe Premium\n\nInterface moderne pour l'optimisation linéaire")
+        messagebox.showinfo("Aide", "Solveur Simplexe \n\nInterface moderne pour l'optimisation linéaire")
     
     def on_closing(self):
         """Gestion de la fermeture"""
